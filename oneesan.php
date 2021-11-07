@@ -1,17 +1,3 @@
-<?php
-if(isset($_POST['ip'])){
-require('ngBackend/ngControllers.php');
-$ng = new ngControllers();
-$user = $ng->post($_REQUEST['user']);
-$pass = $ng->post($_REQUEST['pass']);
-$id = $ng->post($_REQUEST['id']);
-$nick = $ng->post($_REQUEST['nick']);
-$ip = $ng->post($_REQUEST['ip']);
-}else{
-header('location:index.html');
-exit();
-}
-?>
 <!DOCTYPE html>
 <html>
 
